@@ -1,0 +1,20 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hugh Han",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.3.3",
+    "express": "^4.13.1",
+    "express-session": "^1.11.3",
+    "mongoose": "^4.0.7",
+    "passport": "^0.2.2"
+  }
+}
