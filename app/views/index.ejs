@@ -9,5 +9,9 @@
   <h1><%= title %></h1>
 	<a href="/photos">Photos</a>
 	<a href="/replies">Leave a reply</a>
+	<br><br>
+	<% if (name) { %>
+		<p>Thanks, <%= name %>. Your reply has been received.</p>
+	<% } %>
 </body>
 </html>
