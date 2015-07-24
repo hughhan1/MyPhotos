@@ -3,13 +3,13 @@ var replies = require('../../app/controllers/replies.server.controller');
 module.exports = function(app) {
     app.route('/replies')
     	.post(replies.create)
-    	.get(replies.list);
+    	.get(replies.render);
 
-    app.route('/replies/:photoId')
+    app.route('/replies/:replyId')
     	.get(replies.read)
     	.put(replies.update)
     	.delete(replies.delete);
 
-    app.param('photoId', replies.photoByID);
+    app.param('replyId', replies.replyByID);
 
 };

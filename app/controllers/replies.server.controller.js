@@ -1,5 +1,11 @@
 var Reply = require('mongoose').model('Reply');
 
+exports.render = function(req, res) {
+    res.render('reply', {
+        title: 'My Portfolio'
+    });
+};
+
 exports.create = function(req, res, next) { 
     var reply = new Reply(req.body);
     reply.save(function(err) {
@@ -27,7 +33,7 @@ exports.read = function(req, res) {
     res.json(req.reply);
 };
 
-exports.photoByID = function(req, res, next, id) {
+exports.replyByID = function(req, res, next, id) {
     Reply.findOne({
             _id: id
         }, 
