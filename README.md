@@ -1,2 +1,0 @@
-# myPhotos
-# MyPhotos

@@ -1,20 +1,22 @@
 {
-  "name": "myproject",
-  "version": "1.0.0",
+  "name": "myphotos",
+  "version": "0.0.1",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Hugh Han",
-  "license": "ISC",
+  "license": "",
   "dependencies": {
     "body-parser": "^1.13.2",
     "connect-flash": "^0.1.1",
     "ejs": "^2.3.3",
     "express": "^4.13.1",
     "express-session": "^1.11.3",
+    "fs": "0.0.2",
     "mongoose": "^4.0.7",
-    "passport": "^0.2.2"
+    "passport": "^0.2.2",
+    "validator": "^3.41.2"
   }
 }

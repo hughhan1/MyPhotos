@@ -9,12 +9,15 @@
   <h1><%= title %></h1>
   <form id="replyForm" action="replies" method="post">
     <div>
-        <label for="name">Name: </label>
-        <input type="text" id="name" name="name"></input>
+        <label for="firstName">First Name: </label>
+        <input type="text" id="firstName" name="firstName"></input><%= firstNameErr %>
+        <br>
+        <label for="lastName">Last Name: </label>
+        <input type="text" id="lastName" name="lastName"></input><%= lastNameErr %>
         <br>
 
         <label for="email">Email: </label>
-        <input type="text" id="email" name="email"></input>
+        <input type="text" id="email" name="email"></input><%= emailErr %>
         <br><br>
 
         <label for="comments">Comments: </label><br>

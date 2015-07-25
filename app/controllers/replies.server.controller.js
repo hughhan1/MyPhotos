@@ -2,7 +2,10 @@ var Reply = require('mongoose').model('Reply');
 
 exports.render = function(req, res) {
     res.render('reply', {
-        title: 'My Portfolio'
+        title           : 'My Portfolio',
+        firstNameErr    : '',
+        lastNameErr     : '',
+        emailErr        : ''
     });
 };
 
@@ -10,10 +13,19 @@ exports.create = function(req, res, next) {
     var reply = new Reply(req.body);
     reply.save(function(err) {
         if (err) {
-            return next(err);
+            res.render('reply', {
+                title           : 'My Portfolio',
+                firstNameErr    : err.errors.firstName || '',
+                lastNameErr     : err.errors.lastName || '',
+                emailErr        : err.errors.email || ''
+            });
         }
         else {
-            res.json(reply);
+            console.log(reply);
+            res.render('index', {
+                title : 'My Portfolio',
+                name  : reply.firstName
+            });
         }
     });
 };

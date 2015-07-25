@@ -1,8 +1,11 @@
-var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 var PhotoSchema = new Schema({
-    name: String,
+    name: {
+        type: String,
+    },
+    description: String,
     date: {
         type: Date,
         default: Date.now
@@ -12,6 +15,18 @@ var PhotoSchema = new Schema({
     	lat: Number,
         lon: Number
     },
+    path: {
+        type: String,
+        required: true
+    },
+    filename: {
+        type: String,
+        required: true
+    },
+    extension: {
+        type: String,
+        required: true
+    }
 });
 
 mongoose.model('Photo', PhotoSchema);

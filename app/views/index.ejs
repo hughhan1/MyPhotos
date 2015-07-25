@@ -2,12 +2,19 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+  <script type="text/javascript" src="/js/angular/angular.js"></script>
+  <script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
   <title><%= title %></title>
 </head>
 
-<body>
+<body ng-app="portfolio">
+	<section ng-view></section>
   <h1><%= title %></h1>
 	<a href="/photos">Photos</a>
 	<a href="/replies">Leave a reply</a>
+	<br><br>
+	<% if (typeof name !== 'undefined') { %>
+		<p>Thanks, <%= name %>. Your reply has been received.</p>
+	<% } %>
 </body>
 </html>
