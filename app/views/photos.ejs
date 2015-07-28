@@ -7,6 +7,8 @@
 
 <body>
   <h1><%= title %></h1>
-	<!-- stuff here -->
+  <% photos.forEach(function(photo) { %>
+  	<%= photo.name %>
+  <% }); %>
 </body>
 </html>
