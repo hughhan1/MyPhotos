@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <script type="text/javascript" src="/js/angular/angular.js"></script>
   <script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
   <title><%= title %></title>
@@ -9,13 +9,12 @@
 
 <body>
   <h1><%= title %></h1>
- <img src="img/code_pic.jpg"/><br>
   <% photos.forEach(function(photo) { %>
-  	<img src="<%- "img/" + photo.filename + photo.extension %>"/><br>
-  	<%= photo.filename + photo.extension %>
-  	<%= photo.name %><br>
-  	<%= photo.description %><br>
-  	<%= photo.location.name %><br>
+  	<img class="grid" src="<%- "img/" + photo.filename + photo.extension %>"/><br>
+  	<ul>
+  		<li><%= photo.name %></li>
+  		<li><%= photo.description %></li>
+  	</ul>
   <% }); %>
 </body>
 </html>
