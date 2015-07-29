@@ -23,11 +23,11 @@ exports.list = function(req, res, next) {
             return next(err);
         }
         else {
-            res.json(photos);
-            // res.render('photos', {
-            //     title: 'My Portfolio',
-            //     photos: photos
-            // });
+            // res.json(photos);
+            res.render('photos', {
+                title: 'My Portfolio',
+                photos: photos
+            });
         }
     });
 };

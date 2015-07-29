@@ -15,10 +15,6 @@ var PhotoSchema = new Schema({
     	lat: Number,
         lon: Number
     },
-    path: {
-        type: String,
-        required: true
-    },
     filename: {
         type: String,
         required: true

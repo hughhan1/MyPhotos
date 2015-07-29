@@ -2,13 +2,20 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+  <script type="text/javascript" src="/js/angular/angular.js"></script>
+  <script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
   <title><%= title %></title>
 </head>
 
 <body>
   <h1><%= title %></h1>
+ <img src="img/code_pic.jpg"/><br>
   <% photos.forEach(function(photo) { %>
-  	<%= photo.name %>
+  	<img src="<%- "img/" + photo.filename + photo.extension %>"/><br>
+  	<%= photo.filename + photo.extension %>
+  	<%= photo.name %><br>
+  	<%= photo.description %><br>
+  	<%= photo.location.name %><br>
   <% }); %>
 </body>
 </html>
