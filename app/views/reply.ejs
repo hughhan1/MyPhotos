@@ -1,14 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title><%= title %></title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/grayscale.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Custom Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
   <script type="text/javascript" src="/js/angular/angular.js"></script>
   <script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
-  <title><%= title %></title>
+
 </head>
 
-<body>
+<body ng-app="portfolio" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
   <h1><%= title %></h1>
+  <a href="/">Home</a>
+  <a href="/photos">Photos</a>
+  <a href="/replies">Leave a reply</a>
+  <br><br>
+
   <form id="replyForm" action="replies" method="post">
     <div>
         <label for="firstName">First Name: </label>
@@ -28,5 +56,21 @@
     </div>
 		<input type="submit" value="Submit"></input>
 	</form>
+
+  <div id="map"></div>
+
+  <footer>
+      <div class="container text-center">
+          <p>Copyright &copy; Hugh Han 2015</p>
+      </div>
+  </footer>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+  <script src="js/grayscale.js"></script>
 </body>
 </html>

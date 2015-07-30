@@ -2,7 +2,7 @@ var Reply = require('mongoose').model('Reply');
 
 exports.render = function(req, res) {
     res.render('reply', {
-        title           : 'My Portfolio',
+        title           : 'Hugh Han',
         firstNameErr    : '',
         lastNameErr     : '',
         emailErr        : ''
@@ -14,7 +14,7 @@ exports.create = function(req, res, next) {
     reply.save(function(err) {
         if (err) {
             res.render('reply', {
-                title           : 'My Portfolio',
+                title           : 'Hugh Han',
                 firstNameErr    : err.errors.firstName || '',
                 lastNameErr     : err.errors.lastName || '',
                 emailErr        : err.errors.email || ''
@@ -23,7 +23,7 @@ exports.create = function(req, res, next) {
         else {
             console.log(reply);
             res.render('index', {
-                title : 'My Portfolio',
+                title : 'Hugh Han',
                 name  : reply.firstName
             });
         }

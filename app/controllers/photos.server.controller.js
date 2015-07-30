@@ -25,7 +25,7 @@ exports.list = function(req, res, next) {
         else {
             // res.json(photos);
             res.render('photos', {
-                title: 'My Portfolio',
+                title: 'Hugh Han',
                 photos: photos
             });
         }
