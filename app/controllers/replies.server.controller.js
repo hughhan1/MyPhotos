@@ -1,5 +1,15 @@
 var Reply = require('mongoose').model('Reply');
 
+var getErrorMessage = function(err) {
+    if (err.errors) {
+        for (var errName in err.errors) {
+            if (err.errors[errName].message) return err.errors[errName].message;
+        }
+    } else {
+        return 'Unknown server error';
+    }
+};
+
 exports.render = function(req, res) {
     res.render('reply', {
         title           : 'Hugh Han',
@@ -19,6 +29,10 @@ exports.create = function(req, res, next) {
                 lastNameErr     : err.errors.lastName || '',
                 emailErr        : err.errors.email || ''
             });
+
+            // return res.status(400).send({
+            //     message: getErrorMessage(err)
+            // });
         }
         else {
             console.log(reply);
@@ -26,20 +40,34 @@ exports.create = function(req, res, next) {
                 title : 'Hugh Han',
                 name  : reply.firstName
             });
+
+            // res.json(reply);
         }
     });
 };
 
-exports.list = function(req, res, next) {
+exports.list = function(req, res) {
     Reply.find({}, function(err, replies) {
         if (err) {
-            return next(err);
-        }
-        else {
+            return res.status(400).send({
+                message: getErrorMessage(err)
+            });
+        } else {
             res.json(replies);
         }
     });
 };
+
+// exports.list = function(req, res, next) {
+//     Reply.find({}, function(err, replies) {
+//         if (err) {
+//             return next(err);
+//         }
+//         else {
+//             res.json(replies);
+//         }
+//     });
+// };
 
 exports.read = function(req, res) {
     res.json(req.reply);
@@ -53,10 +81,13 @@ exports.replyByID = function(req, res, next, id) {
             if (err) {
                 return next(err);
             }
-            else {
-                req.reply = reply;
-                next();
+
+            if (!reply) {
+                return next(new Error('Failed to load reply ' + id));
             }
+
+            req.reply = reply;
+            next();
         }
     );
 };

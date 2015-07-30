@@ -24,12 +24,11 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <script type="text/javascript" src="/js/angular/angular.js"></script>
-  <script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
-
 </head>
 
 <body ng-app="portfolio" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<section ng-view class="main-section"></section>
 
   <h1><%= title %></h1>
   <a href="/">Home</a>
@@ -65,12 +64,31 @@
       </div>
   </footer>
 
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
-  <script src="js/grayscale.js"></script>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="/js/grayscale.js"></script>
+
+  <script type="text/javascript" src="/js/angular/angular.js"></script>
+  <script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="/js/angular-resource/angular-resource.min.js"></script>
+
+  <script type="text/javascript" src="/photos/photos.client.module.js"></script>
+  <script type="text/javascript" src="/photos/controllers/photos.client.controller.js"></script>
+  <script type="text/javascript" src="/photos/services/photos.client.service.js"></script>
+  <script type="text/javascript" src="/photos/config/photos.client.routes.js"></script>
+
+  <script type="text/javascript" src="/replies/replies.client.module.js"></script>
+  <script type="text/javascript" src="/replies/controllers/replies.client.controller.js"></script>
+  <script type="text/javascript" src="/replies/services/replies.client.service.js"></script>
+  <script type="text/javascript" src="/replies/config/replies.client.routes.js"></script>
+
+  <script type="text/javascript" src="/example/example.client.module.js"></script>
+  <script type="text/javascript" src="/example/controllers/example.client.controller.js"></script>
+  <script type="text/javascript" src="/example/config/example.client.routes.js"></script>
+
+  <script type="text/javascript" src="/application.js"></script>
 </body>
 </html>

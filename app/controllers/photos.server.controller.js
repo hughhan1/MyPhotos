@@ -1,15 +1,22 @@
-var fs = require('fs');
-var path = require('path');
-var url = require('url');
-var imgDir = '/public/img/';
-
 var Photo = require('mongoose').model('Photo');
+
+var getErrorMessage = function(err) {
+    if (err.errors) {
+        for (var errName in err.errors) {
+            if (err.errors[errName].message) return err.errors[errName].message;
+        }
+    } else {
+        return 'Unknown server error';
+    }
+};
 
 exports.create = function(req, res, next) { 
     var photo = new Photo(req.body);
     photo.save(function(err) {
         if (err) {
-            return next(err);
+            return res.status(400).send({
+                message: getErrorMessage(err)
+            });
         }
         else {
             res.json(photo);
@@ -20,14 +27,17 @@ exports.create = function(req, res, next) {
 exports.list = function(req, res, next) {
     Photo.find({}, function(err, photos) {
         if (err) {
-            return next(err);
+            return res.status(400).send({
+                message: getErrorMessage(err)
+            });
         }
         else {
-            // res.json(photos);
             res.render('photos', {
                 title: 'Hugh Han',
                 photos: photos
             });
+
+            // res.json(photos);
         }
     });
 };
@@ -44,10 +54,13 @@ exports.photoByID = function(req, res, next, id) {
             if (err) {
                 return next(err);
             }
-            else {
-                req.photo = photo;
-                next();
+
+            if (!photo) {
+                return next(new Error('Failed to load photo ' + id));
             }
+
+            req.photo = photo;
+            next();
         }
     );
 };

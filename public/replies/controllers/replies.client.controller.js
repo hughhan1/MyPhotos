@@ -1,4 +1,4 @@
-angular.module('replies').controller('RepliesController', ['$scope', '$routeParams', '$location', 'Authentication', 'Replies',
+angular.module('replies').controller('RepliesController', ['$scope', '$routeParams', '$location', 'Replies',
     function($scope, $routeParams, $location, Authentication, Replies) {
         $scope.authentication = Authentication;
 
@@ -21,7 +21,7 @@ angular.module('replies').controller('RepliesController', ['$scope', '$routePara
 
         $scope.findOne = function() {
             $scope.reply = Replies.get({
-                todoId: $routeParams.todoId
+                replyId: $routeParams.replyId
             });
         };
 
