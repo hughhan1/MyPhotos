@@ -1,0 +1,34 @@
+<div data-ng-controller="PhotosController">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Photos</a>
+            </div>
+        </div>
+    </nav>
+
+    <section data-ng-init="find()">
+        <div class="container">
+            <h1>Photos</h1>
+            <ul>
+                <li data-ng-repeat="photo in photos">
+                    <a data-ng-href="#!/photos/{{photo._id}}" data-ng-bind="photo.title" ng-class="photo.completed?'completed':''"></a>
+                    (<small data-ng-bind="photo.created | date:'short'"></small>)
+                    <br>
+
+                    <small data-ng-bind="photo.comment" class="comment"></small>
+                </li>
+            </ul>
+            <div data-ng-hide="!photos || photos.length">
+                No photos yet :(
+            </div>
+        </div>
+    </section>
+</div>

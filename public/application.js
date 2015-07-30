@@ -1,5 +1,5 @@
 var appName = 'myphotos';
-var app = angular.module(appName, ['ngResource', 'ngRoute', 'example', 'users', 'todos']);
+var app = angular.module(appName, ['ngResource', 'ngRoute', 'example', 'photos', 'replies']);
 
 app.config(['$locationProvider', function($locationProvider) {
 		$locationProvider.hashPrefix('!');

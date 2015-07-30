@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author" content="Hugh Han">
 
   <title><%= title %></title>
 
@@ -24,19 +24,24 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+  <script type="text/javascript" src="/example/example.client.module.js"></script>
+  <script type="text/javascript" src="/example/config/example.client.routes.js"></script>
   <script type="text/javascript" src="/js/angular/angular.js"></script>
   <script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="/js/angular-resource/angular-resource.min.js"></script>
 
 </head>
 
 <body ng-app="portfolio" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<section ng-view></section>
 
   <h1><%= title %></h1>
   <a href="/">Home</a>
 	<a href="/photos">Photos</a>
 	<a href="/replies">Leave a reply</a>
 	<br><br>
-  
+
 	<% if (typeof name !== 'undefined') { %>
 		<p>Thanks, <%= name %>. Your reply has been received.</p>
 	<% } %>
