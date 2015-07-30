@@ -1,4 +1,4 @@
-var appName = 'mean';
+var appName = 'myphotos';
 var app = angular.module(appName, ['ngResource', 'ngRoute', 'example', 'users', 'todos']);
 
 app.config(['$locationProvider', function($locationProvider) {
@@ -12,4 +12,4 @@ angular.element(document).ready(function() {
 	angular.bootstrap(document, [appName]);
 });
 
-//var app = angular.module('mean', ['example', 'ngRoute']);
+//var app = angular.module('myphotos', ['example', 'ngRoute']);

@@ -10,6 +10,7 @@
   "license": "",
   "dependencies": {
     "body-parser": "^1.13.2",
+    "bootstrap": "^3.3.5",
     "connect-flash": "^0.1.1",
     "ejs": "^2.3.3",
     "express": "^4.13.1",
