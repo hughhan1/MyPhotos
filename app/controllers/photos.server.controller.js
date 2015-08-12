@@ -86,20 +86,3 @@ exports.delete = function(req, res, next) {
         }
     })
 };
-
-//get the list of jpg files in the image dir
-function getImages(imgDir, callback) {
-    var fileTypes = ['.jpg', 'png'];
-    var files = [];
-    fs.readdir(imgDir, function (err, list) {
-        for (var i = 0; i < list.length; i++) {
-            for (var j = 0; j < fileTypes.length; j++) {
-                if (path.extname(list[i]) === fileTypes[j]) {
-                    files.push(list[i]); //store the file name into the array files
-                    break;
-                }
-            }
-        }
-        callback(err, files);
-    });
-}
