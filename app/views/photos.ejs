@@ -10,11 +10,9 @@
 
   <title><%= title %></title>
 
-<!--
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/grayscale.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
--->
 
   <!-- Custom Fonts -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -28,25 +26,49 @@
 
 </head>
 
-<body ng-app="portfolio" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-<section ng-view class="main-section"></section>
+  <!-- Navigation -->
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top">
+          <i class="fa fa-play-circle"></i>  <span class="light">Hugh</span> Han
+        </a>
+      </div>
 
-  <h1><%= title %></h1>
-  <a href="/">Home</a>
-  <a href="/photos">Photos</a>
-  <a href="/replies">Leave a reply</a>
-  <br><br>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="hidden"><a href="#page-top"></a></li>
+          <li><a class="page-scroll" href="/#about">About</a></li>
+          <li><a class="page-scroll" href="/#experience">Experience</a></li>
+          <li><a class="page-scroll" href="/#contact">Contact</a></li>
+          <li><a href="/photos">Photos</a></li>
+          <li><a href="/replies">Reply</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav>
 
-  <% photos.forEach(function(photo) { %>
-  	<img class="grid" src="<%- "img/" + photo.filename + photo.extension %>"/><br>
-  	<ul>
-  		<li><%= photo.name %></li>
-  		<li><%= photo.description %></li>
-  	</ul>
-  <% }); %>
-
-  <div id="map"></div>
+  <!-- Photos Section -->
+  <section id="photos" class="container content-section text-center">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <% photos.forEach(function(photo) { %>
+          <img class="grid" src="<%- "img/" + photo.filename + photo.extension %>"/><br>
+          <ul>
+            <li><%= photo.name %></li>
+            <li><%= photo.description %></li>
+          </ul>
+        <% }); %>
+      </div>
+    </div>
+  </section>
 
   <footer>
       <div class="container text-center">
