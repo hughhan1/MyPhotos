@@ -29,10 +29,6 @@ exports.create = function(req, res, next) {
                 lastNameErr     : err.errors.lastName || '',
                 emailErr        : err.errors.email || ''
             });
-
-            // return res.status(400).send({
-            //     message: getErrorMessage(err)
-            // });
         }
         else {
             console.log(reply);
@@ -40,8 +36,6 @@ exports.create = function(req, res, next) {
                 title : 'Hugh Han',
                 name  : reply.firstName
             });
-
-            // res.json(reply);
         }
     });
 };

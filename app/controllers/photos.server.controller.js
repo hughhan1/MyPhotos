@@ -36,8 +36,6 @@ exports.list = function(req, res, next) {
                 title: 'Hugh Han',
                 photos: photos
             });
-
-            // res.json(photos);
         }
     });
 };
