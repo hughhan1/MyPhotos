@@ -122,15 +122,14 @@
             <a href="https://linkedin.com/in/hughhan" class="btn btn-default btn-lg"><i class="fa fa-linkedin-square"></i><span class="network-name"> LinkedIn</span></a>
           </li>
         </ul>
+        <% if (typeof name !== 'undefined') { %>
+        <p>Thanks, <%= name %>. Your reply has been received.</p>
+        <% } %>
       </div>
     </div>
   </section>
 
 	<br><br>
-
-	<% if (typeof name !== 'undefined') { %>
-		<p>Thanks, <%= name %>. Your reply has been received.</p>
-	<% } %>
 
   <div id="map"></div>
 

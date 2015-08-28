@@ -52,17 +52,6 @@ exports.list = function(req, res) {
     });
 };
 
-// exports.list = function(req, res, next) {
-//     Reply.find({}, function(err, replies) {
-//         if (err) {
-//             return next(err);
-//         }
-//         else {
-//             res.json(replies);
-//         }
-//     });
-// };
-
 exports.read = function(req, res) {
     res.json(req.reply);
 };
