@@ -32,8 +32,15 @@ ul {
     list-style-type: none;
 }
 
-.grid {
-	width: auto;
-	max-width: 50%;
-	height: auto;
+button, input, select, textarea {
+  background-color: inherit;
+  border: solid;
+  border-color: inherit;
+  border-width: 1px;
+  font-family : inherit;
+  font-size   : 100%;
+}
+
+.portfolio-item {
+    margin-bottom: 50px;
 }

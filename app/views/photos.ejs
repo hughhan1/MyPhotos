@@ -10,9 +10,9 @@
 
   <title><%= title %></title>
 
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/grayscale.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/grayscale.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 
   <!-- Custom Fonts -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -74,17 +74,21 @@
 
   <!-- Photos Section -->
   <section id="photos" class="container content-section text-center">
+    <% var counter = 0; %>
+    <% photos.forEach(function(photo) { %>
+      <% if (counter % 4 == 0) { %>
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
-        <% photos.forEach(function(photo) { %>
-          <img class="grid" src="<%- "img/" + photo.filename + photo.extension %>"/><br>
-          <ul>
-            <li><%= photo.name %></li>
-            <li><%= photo.description %></li>
-          </ul>
-        <% }); %>
+      <% } %>
+      <div class="col-md-6 portfolio-item">
+        <a href="#"><img class="img-responsive" src="<%- "img/" + photo.filename + photo.extension %>" alt=""></a>
+        <h3><a href="#"><%= photo.name %></a></h3>
+        <p><%= photo.description %></p>
       </div>
+      <% if (counter % 4 == 0) { %>
     </div>
+      <% } %>
+      <% counter++; %>
+    <% }); %>
   </section>
 
   <footer>
