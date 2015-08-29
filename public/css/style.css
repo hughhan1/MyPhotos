@@ -30,6 +30,9 @@ td {
 
 ul {
     list-style-type: none;
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 button, input, select, textarea {
@@ -42,5 +45,5 @@ button, input, select, textarea {
 }
 
 .portfolio-item {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }

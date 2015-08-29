@@ -1,10 +1,10 @@
 { 
-	"name" : "Fort McHenry",
-	"description" : "",
+	"name" : "Rocks",
+	"description" : "Caumsett State Park",
 	"date" : "",
 	"location" : {
-		"name" : "Fort McHenry",
+		"name" : "Caumsett State Park, New York",
 	},
-	"filename" : "DSC_0076",
+	"filename" : "rocks",
 	"extension" : ".jpg"
 }
