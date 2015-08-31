@@ -58,15 +58,6 @@ button, input, select, textarea {
     height: 300px;
 }
 
-input:hover {
-  background: #FFFFFF;
-  color: #000000;
-        transition: 2s all;
-        -webkit-transition: 2s all;
-        -moz-transition: 2s all;
-        -o-transition: 2s all;
-}
-
 input[type="text"] {
     outline: none;
     background: none;
@@ -95,10 +86,10 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: #FFFFFF;
     color:#000000;          
-        transition: 2s all;
-        -webkit-transition: 2s all;
-        -moz-transition: 2s all;
-        -o-transition: 2s all;
+        transition: 1.5s all;
+        -webkit-transition: 1.5s all;
+        -moz-transition: 1.5s all;
+        -o-transition: 1.5s all;
 }
 
 textarea {
@@ -111,13 +102,4 @@ textarea {
     font-size: 1em;
     font-weight: 100;
     margin-bottom: 1em;
-}
-
-textarea:hover {
-    background: #FFFFFF;
-    color: #000000;
-        transition: 2s all;
-        -webkit-transition: 2s all;
-        -moz-transition: 2s all;
-        -o-transition: 2s all;
 }
