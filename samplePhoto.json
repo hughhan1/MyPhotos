@@ -1,10 +1,10 @@
 { 
-	"name" : "Rocks",
-	"description" : "Caumsett State Park",
+	"name" : "Birds",
+	"description" : "Acadia National Park",
 	"date" : "",
 	"location" : {
-		"name" : "Caumsett State Park, New York",
+		"name" : "Acadia National Park, Maine",
 	},
-	"filename" : "rocks",
+	"filename" : "otter_cove",
 	"extension" : ".jpg"
 }
