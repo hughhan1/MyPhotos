@@ -1,8 +1,8 @@
 {
-  "name": "myphotos",
-  "version": "0.0.1",
+  "name": "Portfolio",
+  "version": "1.0.0",
   "author": "Hugh Han",
-  "description": "",
+  "description": "Hugh Han's personal website",
   "main": "bower.json",
   "moduleType": [
     "node"

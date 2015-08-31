@@ -40,10 +40,14 @@ button, input, select, textarea {
   border: solid;
   border-color: inherit;
   border-width: 1px;
-  font-family : inherit;
-  font-size   : 100%;
+  font-family: inherit;
+  font-size: 100%;
 }
 
 .portfolio-item {
     margin-bottom: 25px;
+}
+
+.typed-skills {
+    font-size: inherit;
 }
