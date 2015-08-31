@@ -36,12 +36,12 @@ ul {
 }
 
 button, input, select, textarea {
-  background-color: inherit;
-  border: solid;
-  border-color: inherit;
-  border-width: 1px;
-  font-family: inherit;
-  font-size: 100%;
+    background-color: inherit;
+    border: solid;
+    border-color: inherit;
+    border-width: 1px;
+    font-family: inherit;
+    font-size: 100%;
 }
 
 .portfolio-item {
@@ -50,4 +50,74 @@ button, input, select, textarea {
 
 .typed-skills {
     font-size: inherit;
+}
+
+.reply {
+    width: 75%;
+    margin: 2% auto 0;
+    height: 300px;
+}
+
+input:hover {
+  background: #FFFFFF;
+  color: #000000;
+        transition: 2s all;
+        -webkit-transition: 2s all;
+        -moz-transition: 2s all;
+        -o-transition: 2s all;
+}
+
+input[type="text"] {
+    outline: none;
+    background: none;
+    color: #FFFFFF;
+    width: 94%;
+    padding: 10px 10px;
+    border: 1px solid #FFFFFF;
+    font-size: 1em;
+    font-weight: 100;
+    margin-bottom: 1em;
+}
+
+input[type="submit"] {
+    outline: none;
+    background: none;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    width: 94%;
+    margin: 1em 0 .5em 0;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #FFFFFF;
+    color:#000000;          
+        transition: 2s all;
+        -webkit-transition: 2s all;
+        -moz-transition: 2s all;
+        -o-transition: 2s all;
+}
+
+textarea {
+    outline: none;
+    background: none;
+    color: #FFFFFF;
+    width: 94%;
+    padding: 10px 10px;
+    border: 1px solid #FFFFFF;
+    font-size: 1em;
+    font-weight: 100;
+    margin-bottom: 1em;
+}
+
+textarea:hover {
+    background: #FFFFFF;
+    color: #000000;
+        transition: 2s all;
+        -webkit-transition: 2s all;
+        -moz-transition: 2s all;
+        -o-transition: 2s all;
 }

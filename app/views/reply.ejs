@@ -78,28 +78,29 @@
   <section id="reply" class="container content-section text-center">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
-        <form id="replyForm" action="replies" method="post">
-          <div>
-              <label for="firstName">First Name: </label>
-              <input type="text" id="firstName" name="firstName"></input><%= firstNameErr %>
-              <br>
-              <label for="lastName">Last Name: </label>
-              <input type="text" id="lastName" name="lastName"></input><%= lastNameErr %>
+        <div class="reply">
+          <form id="replyForm" action="replies" method="post">
+            <div>
+              <input class="input" type="text" id="firstName" name="firstName" value="<%- firstNameErr || "First Name" %>"onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}"></input>
               <br>
 
-              <label for="email">Email: </label>
-              <input type="text" id="email" name="email"></input><%= emailErr %>
+              <input class="input" type="text" id="lastName" name="lastName" value="<%- lastNameErr || "Last Name" %>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}"></input>
+              <br>
+
+              <input type="text" id="email" name="email" value="<%- emailErr || "Email" %>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"></input>
               <br><br>
 
-              <label for="comments">Comments: </label><br>
-              <textarea type="text" id="comments" name="comments"></textarea>
-              <br><br>
-          </div>
-          <input type="submit" value="Submit"></input>
-        </form>
+              <textarea type="text" id="comments" name="comments" value="Comments" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Comments';}"></textarea>
+              <br>
+            </div>
+            <input type="submit" value="Submit"></input>
+          </form>
+        </div>
       </div>
     </div>
   </section>
+
+  <br><br>
 
   <footer>
       <div class="container text-center">
