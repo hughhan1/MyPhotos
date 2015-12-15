@@ -12,4 +12,4 @@ I wanted some experience with the [MEAN](http://mean.io) stack, and built specif
 The styling of the website is a modified version of the [Grayscale](http://startbootstrap.com/template-overviews/grayscale) theme, and some additional features were implemented using the [TypedJS](http://www.mattboldt.com/demos/typed-js) library.
 
 #### Status ####
-My website is finally deployed! Check it out [here](http://hughhan.me).
+This project has been replaced with a more lightweight, serverless website. It has also been redesigned for a more minimalistic look, and is deployed on GitHub Pages. My **new** website can be viewed [here](http://hughhan.me).
